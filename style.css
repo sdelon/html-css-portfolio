@@ -54,6 +54,18 @@ body {
   color: var(--light-gray-bg);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
 /* HEADER */
 
 header {
@@ -362,7 +374,6 @@ header {
 
 .temoignages-description {
   text-align: center;
-  max-width: 30rem;
   margin: 0 auto;
   margin-bottom: 3rem;
 }
@@ -438,8 +449,46 @@ header {
 .item-user p:first-of-type {
   font-weight: bold;
 }
-
 /* /TEMOIGNAGES */
+
+/* CTA */
+.cta {
+  background-color: var(--red);
+  color: var(--light-gray-bg);
+  padding: calc(var(--page-padding) * 4) var(--page-padding);
+  margin-bottom: var(--spacing-section);
+}
+
+.cta-content {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: var(--title-size);
+  padding-bottom: 2rem;
+}
+
+.cta-content p {
+  font-size: 0.9rem;
+  padding-top: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input[type=email],
+input[type=submit] {
+  padding: 1rem;
+}
+
+input[type=submit] {
+  background-color: var(--light-green);
+  border: 2px solid var(--light-green);
+  cursor: pointer;
+}
+
+/* /CTA */
 
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
