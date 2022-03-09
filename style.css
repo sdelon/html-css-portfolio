@@ -1,3 +1,6 @@
-body {
-  background-color: wheat;
+:root {
+  --light-gray-bg: #F5F4F3;
+  --light-green: #7B9B72;
+  --dark-green: #253022;
+  --red: #AE4F2F;
 }
