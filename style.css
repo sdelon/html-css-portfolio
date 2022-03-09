@@ -487,8 +487,30 @@ input[type=submit] {
   border: 2px solid var(--light-green);
   cursor: pointer;
 }
-
 /* /CTA */
+
+/* FOOTER */
+footer {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--page-padding);
+}
+
+.footer-nav ul {
+  display: flex;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-social img {
+  width: 1.5rem;
+}
+/* /FOOTER */
 
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
