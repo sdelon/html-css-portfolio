@@ -296,6 +296,7 @@ header {
   background-color: var(--light-green);
   color: var(--light-gray-bg);
   padding: calc(var(--page-padding) * 4) 0;
+  margin-bottom: var(--spacing-section);
 }
 
 .steps-content {
@@ -351,6 +352,94 @@ header {
   cursor: pointer;
 }
 /* /STEPS */
+
+/* TEMOIGNAGES */
+.temoignages {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  margin-bottom: var(--spacing-section);
+}
+
+.temoignages-description {
+  text-align: center;
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.temoignages-description h2 {
+  font-size: var(--title-size);
+  padding-bottom: 1rem;
+}
+
+.temoignages-list {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--page-padding);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--flex-gap);
+}
+
+.temoignage-item {
+  flex: 1 1 200px;
+}
+
+.temoignage-item .item-content {
+  background-color: #ffffff;
+  color: var(--dark-green);
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.temoignage-item .item-content:after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+}
+
+.temoignage-item .item-content h3 {
+  font-size: 1rem;
+  padding-bottom: 0.6rem;
+}
+
+.temoignage-item .item-content p {
+  font-size: 0.9rem;
+}
+
+.item-user {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.item-user div {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.item-user div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* .item-user p:nth-child(2) {
+  font-weight: bold;
+} */
+.item-user p:first-of-type {
+  font-weight: bold;
+}
+
+/* /TEMOIGNAGES */
 
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
