@@ -5,7 +5,9 @@
   --red: #AE4F2F;
 
   --body-font: 'Poppins', sans-serif;
-  --main-title: 'Homemade Apple', cursive;
+  --main-title-font: 'Homemade Apple', cursive;
+
+  --title-size : clamp(2rem, 4vw, 4rem);
 
   --shadow-color: 107deg 17% 31%;
   --shadow-elevation-low:
@@ -29,6 +31,7 @@
 
   --page-padding: 1rem;
   --flex-gap: 3rem;
+  --spacing-section: 3rem;
 }
 
 body {
@@ -119,6 +122,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--flex-gap);
+  margin-bottom: var(--spacing-section);
 }
 
 .hero-titles {
@@ -144,8 +148,8 @@ header {
 }
 
 .hero h2 {
-  font-family: var(--main-title);
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-family: var(--main-title-font);
+  font-size: var(--title-size);
   margin: 0.3rem 0 0.6rem 0;
 }
 
@@ -172,7 +176,37 @@ header {
 /* /HERO */
 
 /* FEATURES */
+.features {
+  background-color: var(--light-green);
+  color: var(--light-gray-bg);
+}
 
+.features .features-titles {
+  padding: var(--page-padding);
+  text-align: center;
+}
+
+.features .features-titles h2 {
+  font-size: var(--title-size);
+  margin-bottom: 1rem;
+}
+
+.features-list {
+  padding: var(--page-padding);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--flex-gap);
+  text-align: center;
+}
+
+.features-list .item {
+  flex: 1 1 200px;
+}
+
+.features-list .item img {
+  width: 2rem;
+  margin: 0 auto;
+}
 /* /FEATURES */
 
 /* MEDIA QUERIES */
