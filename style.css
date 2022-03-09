@@ -34,6 +34,11 @@
   --spacing-section: 3rem;
 }
 
+html {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 body {
   background-color: var(--light-gray-bg);
   font-family: var(--body-font);
