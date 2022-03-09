@@ -27,7 +27,8 @@
   17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
   25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
 
-  --page-padding: 1em;
+  --page-padding: 1rem;
+  --flex-gap: 3rem;
 }
 
 body {
@@ -69,7 +70,7 @@ header {
 }
 
 .menu-item a {
-  margin-right: 1em;
+  margin-right: 1rem;
   color: var(--dark-green);
   text-decoration: none;
 }
@@ -78,7 +79,7 @@ header {
 .menu-item a:visited {
   text-decoration-line: underline;
   text-decoration-color: #7B9B72;
-  text-decoration-thickness: 0.2em;
+  text-decoration-thickness: 0.2rem;
 }
 
 .menu-svg {
@@ -90,23 +91,89 @@ header {
   text-align: right;
   position: absolute;
   top: 4rem;
-  right: 1em;
-  padding: 1.5em;
+  right: 1rem;
+  padding: 1.5rem;
+  background-color: var(--light-gray-bg);
   /* background-image: linear-gradient(to bottom, var(--light-green) 10%, transparent ); */
   box-shadow: var(--shadow-elevation-medium);
-  border-radius: 1em;
+  border-radius: 1rem;
 }
 
 .menu-contact {
+  text-decoration: none;
+  color: var(--light-green);
+  font-weight: 800;
   align-self: center;
-  padding: 0.4em 1.8em;
+  padding: 0.4rem 1.8rem;
   background-color: transparent;
   border: 2px solid var(--light-green);
-  border-radius: 2em;
+  border-radius: 2rem;
   cursor: pointer;
 }
-
 /* /HEADER */
+
+/* HERO */
+.hero {
+  padding: var(--page-padding);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--flex-gap);
+}
+
+.hero-titles {
+  margin-top: 1.5rem;
+  flex: 1 1 300px;
+}
+
+.hero-img {
+  flex: 1 1 45%;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero h1 {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: hsl(var(--shadow-color) / 0.70);
+  letter-spacing: 0.1rem;
+}
+
+.hero h2 {
+  font-family: var(--main-title);
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin: 0.3rem 0 0.6rem 0;
+}
+
+.hero-cta .icon {
+  width: 1rem;
+}
+
+.hero-cta button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--light-gray-bg);
+}
+
+.hero .hero-cta {
+  margin-block: 1rem;
+  display: flex;
+  background-color: var(--red);
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/* /HERO */
+
+/* FEATURES */
+
+/* /FEATURES */
 
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
