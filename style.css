@@ -477,6 +477,18 @@ header {
   margin: 0 auto;
 }
 
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+input[type=email] {
+  flex: 1 1 300px;
+}
+
 input[type=email],
 input[type=submit] {
   padding: 1rem;
@@ -499,16 +511,16 @@ footer {
   padding: var(--page-padding);
 }
 
-.footer-nav ul {
-  display: flex;
-}
-
 .footer-social {
   display: flex;
 }
 
 .footer-social img {
-  width: 1.5rem;
+  width: 1.4rem;
+}
+
+.footer-social li:not(:last-child) {
+  margin-right: 1rem;
 }
 /* /FOOTER */
 
