@@ -3,6 +3,123 @@
   --light-green: #7B9B72;
   --dark-green: #253022;
   --red: #AE4F2F;
+
   --body-font: 'Poppins', sans-serif;
   --main-title: 'Homemade Apple', cursive;
+
+  --shadow-color: 107deg 17% 31%;
+  --shadow-elevation-low:
+  0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+  0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+  1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium:
+  0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+  0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+  2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+  5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high:
+  0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+  1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+  2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+  4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+  7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+  11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+  17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+  25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+
+  --page-padding: 1em;
+}
+
+body {
+  background-color: var(--light-gray-bg);
+  font-family: var(--body-font);
+}
+
+/* UTILITY CLASSES */
+.visible {
+  visibility: hidden;
+}
+
+/* HEADER */
+
+header {
+  padding: var(--page-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  color: var(--light-green);
+  width: fit-content;
+}
+
+.main-menu {
+  display: none;
+  width: 100%;
+}
+
+.main-menu nav ul {
+  display: flex;
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.menu-item a {
+  margin-right: 1em;
+  color: var(--dark-green);
+  text-decoration: none;
+}
+
+.menu-item a:hover,
+.menu-item a:visited {
+  text-decoration-line: underline;
+  text-decoration-color: #7B9B72;
+  text-decoration-thickness: 0.2em;
+}
+
+.menu-svg {
+  width: 1em;
+  cursor: pointer;
+}
+
+.small-nav {
+  text-align: right;
+  position: absolute;
+  top: 4rem;
+  right: 1em;
+  padding: 1.5em;
+  /* background-image: linear-gradient(to bottom, var(--light-green) 10%, transparent ); */
+  box-shadow: var(--shadow-elevation-medium);
+  border-radius: 1em;
+}
+
+.menu-contact {
+  align-self: center;
+  padding: 0.4em 1.8em;
+  background-color: transparent;
+  border: 2px solid var(--light-green);
+  border-radius: 2em;
+  cursor: pointer;
+}
+
+/* /HEADER */
+
+/* MEDIA QUERIES */
+@media (min-width: 500px) {
+  .main-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-svg {
+    display: none;
+  }
+
+  .small-nav { 
+    display: none;
+  }
 }

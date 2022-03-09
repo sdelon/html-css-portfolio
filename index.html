@@ -5,13 +5,44 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poppins:wght@400;800&display=swap" rel="stylesheet">
     <title>HTML et CSS portfolio</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <header>
+      <h1 class="logo">Logo</h1>
+      <div class="main-menu">
+        <nav>
+          <ul>
+            <li class="menu-item"><a href="#">Accueil</a></li>
+            <li class="menu-item"><a href="#">A propos</a></li>
+            <li class="menu-item"><a href="#">Blog</a></li>
+          </ul>
+        </nav>
+        <button class="menu-contact">Contact</button>
+      </div>
+      <img id="menu-icon" class="menu-svg" src="/svg/menu.svg" alt="">
+      <div id="show-menu" class="small-nav visible">
+        <ul>
+          <li class="menu-item"><a href="#">Accueil</a></li>
+          <li class="menu-item"><a href="#">A propos</a></li>
+          <li class="menu-item"><a href="#">Blog</a></li>
+        </ul>
+        <button class="menu-contact">Contact</button>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-titles">
+        <h1>Votre agence de marketing digital</h1>
+        <h2>Design et qualité au service de vos clients</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        <div><img src="/svg/arrow.svg" alt=""><button></button></div>
+      </div>
+      <img src="https://picsum.photos/500/300" alt="description émotionnelle de l'image. Important pour le SEO">
+    </section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
