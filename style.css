@@ -29,6 +29,7 @@
   17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
   25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
 
+  --page-max-width: 1200px;
   --page-padding: 1rem;
   --flex-gap: 3rem;
   --spacing-section: 3rem;
@@ -36,7 +37,6 @@
 
 html {
   margin: 0 auto;
-  max-width: 1200px;
 }
 
 body {
@@ -49,9 +49,16 @@ body {
   visibility: hidden;
 }
 
+.is-step-active {
+  background-color: var(--red);
+  color: var(--light-gray-bg);
+}
+
 /* HEADER */
 
 header {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
   padding: var(--page-padding);
   display: flex;
   justify-content: space-between;
@@ -122,6 +129,8 @@ header {
 
 /* HERO */
 .hero {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
   padding: var(--page-padding);
   display: flex;
   flex-wrap: wrap;
@@ -199,6 +208,8 @@ header {
 }
 
 .features-list {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
   padding: var(--page-padding);
   display: flex;
   flex-wrap: wrap;
@@ -223,7 +234,10 @@ header {
 
 /* PROJETS */
 .projets {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
   padding: var(--page-padding);
+  margin-bottom: var(--spacing-section);
 }
 
 .projets h2 {
@@ -277,6 +291,67 @@ header {
 
 /* /PROJETS */
 
+/* STEPS */
+.steps {
+  background-color: var(--light-green);
+  color: var(--light-gray-bg);
+  padding: calc(var(--page-padding) * 4) 0;
+}
+
+.steps-content {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: var(--page-padding);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--flex-gap);
+}
+
+.steps-description {
+  flex: 1 1 350px;
+  align-self: center;
+}
+
+.steps-description h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.steps-description img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.steps-list {
+  flex: 1 1 50%;
+}
+
+.step-item {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-item:not(.is-step-active) {
+  background-color: var(--light-gray-bg);
+  color: var(--dark-green);
+}
+
+.step-item h3 {
+  text-transform: uppercase;
+}
+
+.step-round {
+  min-width: 2rem;
+  height: 2rem;
+  background-color: var(--dark-green);
+  border-radius: 50%;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+/* /STEPS */
+
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
   .main-menu {
@@ -294,7 +369,7 @@ header {
 
   .projets-grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, 20vw);
+    grid-template-rows: repeat(4, 20vw);
   }
 
   .item-1 {
