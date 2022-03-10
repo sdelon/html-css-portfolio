@@ -11,13 +11,19 @@ const open_menu = e => {
 menu_icon.addEventListener('click', open_menu);
 
 // Modifier la couleur des steps
-const steps = document.querySelector('.steps-list');
+const steps = document.querySelectorAll('.step-round');
 
 const toggle_step_active = e => {
-  const current_step = e.target; 
-  console.dir(current_step)
+  const current_step = e.target.parentNode; 
+  const all_steps = [...steps].map(step => step.parentNode)
 
-  current_step.classList.contains('is-step-active') ? current_step.classList.remove('is-step-active') : current_step.classList.add('is-step-active');
+  all_steps.filter(step => {
+    if(step === current_step) {
+      step.classList.add('is-step-active');
+    } else {
+      step.classList.remove('is-step-active');
+    }
+  })
 }
 
-steps.addEventListener('click', toggle_step_active);
+steps.forEach(step => step.addEventListener('click', toggle_step_active));
