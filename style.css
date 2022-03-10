@@ -89,7 +89,6 @@ header {
 
 .main-menu nav ul {
   display: flex;
-  justify-content: flex-end;
 }
 
 .menu-item {
@@ -531,10 +530,14 @@ footer {
 /* /FOOTER */
 
 /* MEDIA QUERIES */
-@media (min-width: 500px) {
+@media (min-width: 530px) {
   .main-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+  }
+
+  .main-menu nav ul {
+    margin-right: 2rem;
   }
 
   .menu-svg {
