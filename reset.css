@@ -1,19 +1,19 @@
-/* A modified version of my "modern reset" https://github.com/hankchizljaw/modern-css-reset */
+/* Une version modifiée trouvée sur https://github.com/hankchizljaw/modern-css-reset */
 
-/* Box sizing rules */
+/* Règles de dimensionnement des box */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default padding */
+/* Supprime le padding par défaut */
 ul[class],
 ol[class] {
   padding: 0;
 }
 
-/* Remove default margin */
+/* Supprime les marges par défaut */
 body,
 h1,
 h2,
@@ -29,36 +29,25 @@ dd {
   margin: 0;
 }
 
-/* Set core root defaults */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
+/* Définir les valeurs par défaut du body */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
-/* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-  list-style: none;
-}
-
-/* A elements that don’t have a class get default styles */
+/* Les éléments a qui n'ont pas de classe reçoivent des styles par défaut. */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
+/* Faciliter le travail sur les images */
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
+/* Polices héritées pour les input et les buttons */
 input,
 button,
 textarea,
@@ -66,7 +55,7 @@ select {
   font: inherit;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
+/* Supprime toutes les animations et transitions pour les personnes qui préfèrent ne pas les voir. */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01s !important;
