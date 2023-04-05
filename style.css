@@ -178,13 +178,12 @@ header {
 
 .hero-cta .icon {
   width: 1rem;
+  margin-right: 0.5rem;
 }
 
-.hero-cta button {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+.hero-cta a {
   color: var(--light-gray-bg);
+  text-decoration: none;
 }
 
 .hero .hero-cta {
