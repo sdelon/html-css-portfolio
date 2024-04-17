@@ -487,6 +487,15 @@ footer {
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 550px) {
+  .main-menu ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-svg {
+    display: none;
+  }
+  
   .projets-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 20vw);

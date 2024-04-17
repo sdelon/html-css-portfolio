@@ -12,8 +12,8 @@ menu_icon.addEventListener('click', open_menu);
 const steps = document.querySelectorAll('.step-round');
 
 const toggle_step_active = event => {
-  const current_step = event.target.parentNode; 
-  const all_steps = [...steps].map(step => step.parentNode)
+  const current_step = event.target.parentElement; 
+  const all_steps = [...steps].map(step => step.parentElement)
 
   all_steps.filter(step => {
     if(step === current_step) {
